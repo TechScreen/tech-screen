@@ -7,7 +7,12 @@ class AvailableQuestionsList extends Component {
   renderQuestions() {
     return this.props.availableQuestions.map((question) => {
       return (
-        <li key={question} className="list-group-item">{question}</li>
+        <li 
+          key={question}
+          onClick={() => this.props.selectQuestion(question)}
+          className="list-group-item">
+          {question}
+        </li>
       );
     });
   }

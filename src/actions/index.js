@@ -1,3 +1,8 @@
 export function selectQuestion(question) {
-  console.log('A question has been selected:', question);
+  // SelectQuestion is an ActionCreator, it must return an action with a type property
+  // Each action has a type (required and describes purpose of action) and a payload (optional data that describes action)
+  return {
+    type: 'QUESTION_SELECTED',
+    payload: question
+  };
 }
