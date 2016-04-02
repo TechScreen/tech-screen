@@ -1,0 +1,64 @@
+{
+  "id": "",
+  "name": "Generic Interview",
+  "children": [
+    "id": "",
+    "name": "Introductions",
+    "description:" "General introductions and getting to know the candidate.",
+    "questions": [
+      "Tell me a little about yourself.",
+      "Whats the most interesting thing you've learned recently?",
+      "Whats your favorite new experimental technology?",
+    ],
+    "lookoutFor": [
+      "Are they passionate about something they've worked on in the past?",
+      "Do you they keep abreast on new developments in the field? Are they excited / learning any new cutting-edge stuff?"
+    ],
+    "followups": [
+      "Tell me about the project you're most proud of.",
+    ],
+    "advice": [
+
+    ],
+    "resources": [ {
+      "id": "",
+      "uri": "",
+      "type": ""
+    }
+
+    ],
+    "children": [
+      {
+        "id": "",
+        "name": "Implement Each",
+        "description": "Implement the each function that accepts an array as input and loops over it
+                        executing a callback on each item in the array.",
+        "questions": [
+          "Why don't you write some tests with expected inputs and outputs",
+          "Cool, now lets implement the function!"
+        ],
+        "lookoutFor": [
+          "Understanding of inputs and outputs and how to write simple tests",
+          "Understanding of a callback and functions as first class citizens"
+        ],
+        "followups": [
+          "Do you have any questions you want to ask me about callbacks or functional programming?",
+        ],
+        "advice": [
+
+        ],
+        "resources": [
+
+        ],
+        "children": [
+          {
+            "name": "Implement Map"
+          },
+          {
+            "name": "Implement Filter"
+          }
+        ]
+      },
+    ]
+  ]
+}
