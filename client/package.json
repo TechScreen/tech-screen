@@ -13,6 +13,12 @@
     "Richie Artoul",
     "David Goldberg"
   ],
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.2.1",
@@ -33,6 +39,7 @@
     "immutable": "^3.7.6",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
+    "react-ace": "^3.2.0",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.0",
     "redux": "^3.0.4"
