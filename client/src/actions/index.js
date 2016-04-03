@@ -20,3 +20,10 @@ export function changeEditorContents(newEditorContents) {
     editorContents: newEditorContents,
   }
 }
+
+export function changeLanguageSelector(language) {
+  return {
+    type: 'CHANGE_LANGUAGE_SELECTOR',
+    languageSelector: language,
+  }
+}
