@@ -21,9 +21,10 @@ export function changeEditorContents(newEditorContents) {
   }
 }
 
-export function changeLanguageSelector(language) {
+export function changeSelectedLanguage(language) {
+  console.log('in changelangague: ', language);
   return {
-    type: 'CHANGE_LANGUAGE_SELECTOR',
-    languageSelector: language,
+    type: 'CHANGE_LANGUAGE_SELECTED',
+    selectedLanguage: language,
   }
 }

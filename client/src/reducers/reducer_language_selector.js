@@ -1,7 +1,7 @@
-export default function(state = ['javascript','ruby','python'], action) {
+export default function(state = 'JavaScript', action) {
   switch (action.type) {
-    case 'CHANGE_LANGUAGE_SELECTOR':
-      return action.languageSelector;
+    case 'CHANGE_SELECTED_LANGUAGE':
+      return action.selectedLanguage;
   }
   return state;
 }

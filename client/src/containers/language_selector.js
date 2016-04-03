@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { changeLanguageSelector } from '../actions/index';
+import { changeSelectedLanguage } from '../actions/index';
 import { bindActionCreators } from 'redux';
 
 class LanguageSelector extends Component {
   render() {
-    // if (!this.props.languageSelector) {
-    //   return <div>Select a language to get started.</div>
-    // }
     return (
       <div>
-        <a className='dropdown-button btn' href='#' data-activates='dropdown1'>Drop Me!</a>
-        <ul id='dropdown1' className='dropdown-content'>
-          <li><a href="#!">one</a></li>
-          <li><a href="#!">two</a></li>
-          <li className="divider"></li>
-          <li><a href="#!">three</a></li>
-        </ul>
+        <select className="input-field col s12 browser-default" value={this.props.selectedLanguage} onChange={(event) => this.props.changeSelectedLanguage(event.target.value)}>
+          <option name="Javascript" value="JavaScript">JavaScript</option>
+          <option name="Python" value="Python">Python</option>
+          <option name="Ruby" value="Ruby">Ruby</option>
+          <option name="Java" value="Java">Java</option>
+          <option name="Golang" value="Golang">Golang</option>
+          <option name="Rust" value="Rust">Rust</option>
+          <option name="Clojure" value="Clojure">Clojure</option>
+          <option name="Scala" value="Scala">Scala</option>
+        </select>
       </div>
     );
   }
@@ -24,7 +24,7 @@ class LanguageSelector extends Component {
 
 function mapStateToProps(state) {
   return {
-    languageSelector: state.languageSelector,
+    selectedLanguage: state.selectedLanguage,
   }
 }
 
@@ -33,7 +33,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   // Whenever select book is called, pass result to all reducers
   return bindActionCreators({
-    changeLanguageSelector: changeLanguageSelector
+    changeSelectedLanguage: changeSelectedLanguage
   }, dispatch);
 }
 

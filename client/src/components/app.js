@@ -9,12 +9,16 @@ import LanguageSelector from '../containers/language_selector';
 import AceEditor from 'react-ace';
 // import Editor from '../components/editor';
 // TODO add import statements for modes to support
-// import 'brace/mode/javascript';
-// import 'brace/mode/python';
-// import 'brace/mode/ruby';
-// import 'brace/mode/java';
 
 import 'brace/mode/javascript';
+import 'brace/mode/python';
+import 'brace/mode/ruby';
+import 'brace/mode/java';
+import 'brace/mode/golang';
+import 'brace/mode/rust';
+import 'brace/mode/clojure';
+import 'brace/mode/scala';
+
 import 'brace/theme/terminal';
 import {bindActionCreators} from 'redux';
 
