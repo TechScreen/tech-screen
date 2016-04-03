@@ -34,7 +34,6 @@ class AvailableQuestionsList extends Component {
   render() {
     return (
       <div className="row">
-        <div className="col s12 m5">
           <div className="card-panel teal">
             <span onClick={() => this.previousAvailableQuestion()}>
               Previous
@@ -46,7 +45,6 @@ class AvailableQuestionsList extends Component {
               Next
             </span>
           </div>
-        </div>
       </div>
     )
   }
