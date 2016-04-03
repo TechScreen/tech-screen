@@ -13,3 +13,10 @@ export function changeActiveAvailableQuestion(questionIndex) {
     activeAvailableQuestionIndex: questionIndex,
   }
 }
+
+export function changeEditorContents(newEditorContents) {
+  return {
+    type: 'CHANGE_EDITOR_CONTENTS',
+    editorContents: newEditorContents,
+  }
+}

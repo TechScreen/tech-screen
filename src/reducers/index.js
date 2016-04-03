@@ -1,12 +1,14 @@
 import { combineReducers } from 'redux';
-import AvailableQuestionsReducer from './reducer_available_questions';
-import ActiveQuestion from './reducer_active_question';
+import availableQuestionsReducer from './reducer_available_questions';
+import activeQuestionReducer from './reducer_active_question';
 import activeAvailableQuestionReducer from './reducer_active_available_question';
+import editorContentsReducer from './reducer_editor_contents';
 
 const rootReducer = combineReducers({
-  availableQuestions: AvailableQuestionsReducer,
+  availableQuestions: availableQuestionsReducer,
   activeAvailableQuestion: activeAvailableQuestionReducer,
-  activeQuestion: ActiveQuestion
+  activeQuestion: activeQuestionReducer,
+  editorContents: editorContentsReducer,
 });
 
 export default rootReducer;
