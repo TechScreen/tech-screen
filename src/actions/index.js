@@ -6,3 +6,10 @@ export function selectQuestion(question) {
     payload: question
   };
 }
+
+export function changeActiveAvailableQuestion(questionIndex) {
+  return {
+    type: 'CHANGE_ACTIVE_AVAILABLE_QUESTION',
+    activeAvailableQuestionIndex: questionIndex,
+  }
+}
