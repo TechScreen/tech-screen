@@ -38,13 +38,7 @@ export function executeCode(code, language) {
   const request = axios.post(url, {
       codeToExecute: code,
       language: language,
-    })
-    .then(function(res) {
-      console.log(res);
-    })
-    .catch(function(err) {
-      console.log(err);
-  });
+    });
 
   return {
     type: EXECUTE_CODE,

@@ -4,16 +4,15 @@ import {executeCode, selectedLanguage, editorContents} from '../actions/index';
 import {bindActionCreators} from 'redux';
 
 class ExecuteCode extends Component {
-  handleCodeSubmit(e) {
-    e.preventDefault();
+  handleCodeSubmit() {
     console.log('in submit');
-    this.props.executeCode(this.props.editorContents, this.props.selectedLanguage).bind(this);
+    this.props.executeCode(this.props.editorContents, this.props.selectedLanguage);
   }
 
   render() {
     return (
       <div>
-        <button className="btn waves-effect waves-light" type="submit" name="action" onSubmit={this.handleCodeSubmit}>Submit
+        <button className="btn waves-effect waves-light" type="submit" name="action" onSubmit={this.handleCodeSubmit()}>Submit
         </button>
       </div>
     );
