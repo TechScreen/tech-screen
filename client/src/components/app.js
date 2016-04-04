@@ -2,13 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Component } from 'react';
 import { changeEditorContents } from '../actions';
+import { bindActionCreators } from 'redux';
+import AceEditor from 'react-ace';
 
 import AvailableQuestionsList from '../containers/available_questions.js';
 import QuestionDetail from '../containers/question_detail';
 import LanguageSelector from '../containers/language_selector';
-import AceEditor from 'react-ace';
-// import Editor from '../components/editor';
-// TODO add import statements for modes to support
+import ExecuteCode from '../containers/execute_code';
 
 import 'brace/mode/javascript';
 import 'brace/mode/python';
@@ -18,9 +18,7 @@ import 'brace/mode/golang';
 import 'brace/mode/rust';
 import 'brace/mode/clojure';
 import 'brace/mode/scala';
-
 import 'brace/theme/terminal';
-import {bindActionCreators} from 'redux';
 
 class App extends Component {
   render() {
@@ -44,6 +42,7 @@ class App extends Component {
         </div>
         <QuestionDetail />
         <LanguageSelector />
+        <ExecuteCode />
       </div>
     );
   }

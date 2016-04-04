@@ -1,3 +1,8 @@
+import axios from 'axios';
+
+export const EXECUTE_CODE = 'EXECUTE_CODE';
+export const ROOT_URL = 'localhost:3000';
+
 export function selectQuestion(question) {
   // SelectQuestion is an ActionCreator, it must return an action with a type property
   // Each action has a type (required and describes purpose of action) and a payload (optional data that describes action)
@@ -22,9 +27,27 @@ export function changeEditorContents(newEditorContents) {
 }
 
 export function changeSelectedLanguage(language) {
-  console.log('in changelangague: ', language);
   return {
-    type: 'CHANGE_LANGUAGE_SELECTED',
+    type: 'CHANGE_SELECTED_LANGUAGE',
     selectedLanguage: language,
+  }
+}
+
+export function executeCode(code, language) {
+  const url = `${ROOT_URL}/code/execute`;
+  const request = axios.post(url, {
+      codeToExecute: code,
+      language: language,
+    })
+    .then(function(res) {
+      console.log(res);
+    })
+    .catch(function(err) {
+      console.log(err);
+  });
+
+  return {
+    type: EXECUTE_CODE,
+    payload: request,
   }
 }
