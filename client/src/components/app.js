@@ -31,7 +31,7 @@ class App extends Component {
             // TODO mode needs to be filled in from props and state,
             // javascript ruby python java c
             // when an action occurs which changes lanugage in drop down then we should update props to set mode to that language, update state, to update props, to update mode
-            
+
             mode={this.props.languageSelector}
             width="100%"
             theme="terminal"
