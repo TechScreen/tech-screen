@@ -3,7 +3,7 @@ import availableQuestionsReducer from './reducer_available_questions';
 import activeQuestionReducer from './reducer_active_question';
 import activeAvailableQuestionReducer from './reducer_active_available_question';
 import editorContentsReducer from './reducer_editor_contents';
-import languageSelectorReducer from './reducer_language_selector';
+import selectedLanguageReducer from './reducer_selected_language';
 import executeCodeReducer from './reducer_execute_code';
 
 const rootReducer = combineReducers({
@@ -11,7 +11,7 @@ const rootReducer = combineReducers({
   activeAvailableQuestion: activeAvailableQuestionReducer,
   activeQuestion: activeQuestionReducer,
   editorContents: editorContentsReducer,
-  selectedLanguage: languageSelectorReducer,
+  selectedLanguage: selectedLanguageReducer,
   executeCode: executeCodeReducer,
 });
 

@@ -8,14 +8,14 @@ class LanguageSelector extends Component {
     return (
       <div>
         <select className="input-field col s12 browser-default" value={this.props.selectedLanguage} onChange={(event) => this.props.changeSelectedLanguage(event.target.value)}>
-          <option name="Javascript" value="JAVASCRIPT">JavaScript</option>
-          <option name="Python" value="PYTHON">Python</option>
-          <option name="Ruby" value="Ruby">Ruby</option>
-          <option name="Java" value="Java">Java</option>
-          <option name="Golang" value="Golang">Golang</option>
-          <option name="Rust" value="Rust">Rust</option>
-          <option name="Clojure" value="Clojure">Clojure</option>
-          <option name="Scala" value="Scala">Scala</option>
+          <option name="Javascript" value="javascript">JavaScript</option>
+          <option name="Python" value="python">Python</option>
+          <option name="Ruby" value="ruby">Ruby</option>
+          <option name="Java" value="java">Java</option>
+          <option name="Golang" value="golang">Golang</option>
+          <option name="Rust" value="rust">Rust</option>
+          <option name="Clojure" value="clojure">Clojure</option>
+          <option name="Scala" value="scala">Scala</option>
         </select>
       </div>
     );

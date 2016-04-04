@@ -1,4 +1,4 @@
-export default function(state = 'JavaScript', action) {
+export default function(state = 'javascript', action) {
   switch (action.type) {
     case 'CHANGE_SELECTED_LANGUAGE':
       return action.selectedLanguage;

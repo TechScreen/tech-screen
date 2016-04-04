@@ -32,7 +32,7 @@ class App extends Component {
             // javascript ruby python java c
             // when an action occurs which changes lanugage in drop down then we should update props to set mode to that language, update state, to update props, to update mode
 
-            mode={this.props.languageSelector}
+            mode={this.props.selectedLanguage}
             width="100%"
             theme="terminal"
             name="SOME_NAME" />
@@ -52,7 +52,7 @@ function mapStateToProps(state) {
   return {
     editorContents: state.editorContents,
     // Update state for mode
-    languageSelector: state.languageSelector,
+    selectedLanguage: state.selectedLanguage,
   }
 }
 
