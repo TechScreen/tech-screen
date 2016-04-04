@@ -7,6 +7,8 @@ import "net/url"
 import "encoding/json"
 import "strings"
 import "os"
+// import "github.com/gorilla/handlers"
+import "github.com/rs/cors"
 // Is this really the best way to do this?
 import "github.com/gorilla/mux"
 
@@ -78,6 +80,7 @@ func main() {
     configuration := loadConfig()
     router := mux.NewRouter()
     router.HandleFunc("/code/execute", func(w http.ResponseWriter, req *http.Request) {
+        w.Header().Set("Access-Control-Allow-Origin", "*")
         executeCodeRequest := new(ExecuteCodeRequest)
         json.NewDecoder(req.Body).Decode(executeCodeRequest)
         codeExecutionResult, err := executeCode(
@@ -89,8 +92,12 @@ func main() {
           // TODO: Better errorhandling
           panic("Error encountered connecting to HackerEarth!")
         }
-        fmt.Fprintf(w, "server response: %q", codeExecutionResult.RunStatus.Output)
+        fmt.Fprintf(w, "%q", codeExecutionResult.RunStatus.Output)
     }).Methods("POST")
-    http.Handle("/", router)
-    log.Fatal(http.ListenAndServe(":8080", nil))
+    cors_options := cors.New(cors.Options{
+      AllowedOrigins: []string{"*"},
+      AllowCredentials: true,
+    })
+    http.Handle("/", cors_options.Handler(router))
+    log.Fatal(http.ListenAndServe(":3000", nil))
 }

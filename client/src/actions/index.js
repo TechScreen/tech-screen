@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const EXECUTE_CODE = 'EXECUTE_CODE';
-export const ROOT_URL = 'localhost:3000';
+export const ROOT_URL = 'http://localhost:3000';
 
 export function selectQuestion(question) {
   // SelectQuestion is an ActionCreator, it must return an action with a type property
